@@ -8,5 +8,14 @@ var obj2 = {
 };
 
 function extend(obj1, obj2) {
-    // your code here
+    // 
+    for (keys in obj2){
+        if (!(keys in obj1)){
+       console.log(keys);
+       obj1[keys]=obj2[keys];}
+    }
+    return true;
 }
+
+extend  (obj1, obj2);
+console.log(obj1);
